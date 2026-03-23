@@ -1,0 +1,17 @@
+f = open("expenses.txt", "w")
+n = int(input("Enter number of days:"))
+
+for i in range(n):
+  expense = float(input(f"Enter expense for day {i+1}: "))
+  f.write(str(expense) + "\n")
+
+f.close()
+
+f = open("expenses. txt", "r")
+total = 0
+
+for line in f:
+  total += float(line.strip())
+
+print("Total Monthly Expense =", total)
+f.close()
